@@ -20,6 +20,7 @@ import {
 import { doc, getDocFromServer, getDocsFromServer, limit, collection, query, where } from "firebase/firestore";
 import { db } from "@/firebase/firebaseConfig";
 import { minimizePackageData, minimizeRegionData, minimizeReviewData } from "@/utils/dataMinimizers";
+import { withRedisCache } from "@/lib/cache";
 
 // Safe serialization with depth and circularity safeguards
 const serializeData = (obj, depth = 0, seen = new WeakSet()) => {
@@ -43,8 +44,8 @@ const serializeData = (obj, depth = 0, seen = new WeakSet()) => {
   return result;
 };
 
-export const fetchReviews = unstableCache(
-  async () => {
+export const fetchReviews = unstableCache(async () => {
+    return withRedisCache("cachedReviews", "reviews", async () => {
     try {
       const cacheRef = doc(db, COLLECTIONS.CACHED_REVIEWS, REVIEWS_DOC_ID);
       const cacheDoc = await getDocFromServer(cacheRef);
@@ -64,15 +65,16 @@ export const fetchReviews = unstableCache(
       });
       return [];
     }
+    }, 86400);
   },
   ["reviews"],
   {
-    revalidate: 60, // 1 minute
+    revalidate: 86400,
   }
 );
 
-export const fetchRegions = unstableCache(
-  async () => {
+export const fetchRegions = unstableCache(async () => {
+    return withRedisCache("regions", "all", async () => {
     try {
       const regionsQuery = getCollectionQuery(COLLECTIONS.REGIONS);
       const regions = await getDocsFromServer(regionsQuery).then((res) =>
@@ -104,10 +106,11 @@ export const fetchRegions = unstableCache(
         internationalRegions: [],
       };
     }
+    }, 86400);
   },
   ["regions"],
   {
-    revalidate: 60, // 1 minute
+    revalidate: 86400,
   }
 );
 
@@ -252,8 +255,8 @@ const getAllPackagesByTheme = async () => {
   }
 };
 
-export const getRegionsForHome = cache(unstableCache(
-  async () => {
+export const getRegionsForHome = cache(unstableCache(async () => {
+    return withRedisCache("regions", "home", async () => {
     try {
       const regionsQuery = getCollectionQuery(COLLECTIONS.REGIONS);
       const regionsSnapshot = await getDocsFromServer(regionsQuery);
@@ -309,13 +312,14 @@ export const getRegionsForHome = cache(unstableCache(
       });
       return [];
     }
+    }, 86400);
   },
   ["regions-home"],
-  { revalidate: 60 }
+  { revalidate: 86400 }
 ));
 
-export const getMarketingBanners = cache(unstableCache(
-  async () => {
+export const getMarketingBanners = cache(unstableCache(async () => {
+    return withRedisCache("marketing_banners", "all", async () => {
     try {
       const bannersCollection = collection(db, "marketing_banners");
       const bannersQuery = query(
@@ -334,13 +338,14 @@ export const getMarketingBanners = cache(unstableCache(
       console.error("Error fetching marketing banners:", error);
       return null;
     }
+    }, 3600);
   },
   ["marketing-banners"],
-  { revalidate: 60 }
+  { revalidate: 3600 }
 ));
 
-export const getCuratedPackagesForHome = cache(unstableCache(
-  async (packageType) => {
+export const getCuratedPackagesForHome = cache(unstableCache(async (packageType) => {
+    return withRedisCache("published_packages", `curated_${packageType}`, async () => {
     try {
       // Add limit to prevent fetching too many packages for the home page
       const conditions = [limit(12)];
@@ -350,13 +355,14 @@ export const getCuratedPackagesForHome = cache(unstableCache(
       console.error(`Error getting curated packages for home (type: ${packageType}):`, error);
       return [];
     }
+    }, 3600);
   },
   ["curated-packages-home-v2"],
-  { revalidate: 60 }
+  { revalidate: 3600 }
 ));
 
-export const getGroupDeparturePackagesForHome = unstableCache(
-  async () => {
+export const getGroupDeparturePackagesForHome = unstableCache(async () => {
+    return withRedisCache("published_packages", "group_departure", async () => {
     try {
       const packages = await getGroupDeparturePackages();
       return serializeData(packages); 
@@ -364,13 +370,14 @@ export const getGroupDeparturePackagesForHome = unstableCache(
       console.error("Error getting group departure packages for home:", error);
       return [];
     }
+    }, 3600);
   },
   ["group-departure-home-v2"],
-  { revalidate: 60 }
+  { revalidate: 3600 }
 );
 
-export const getThemePackagesForHome = cache(unstableCache(
-  async () => {
+export const getThemePackagesForHome = cache(unstableCache(async () => {
+    return withRedisCache("published_packages", "themes", async () => {
     try {
       const data = await getAllPackagesByTheme();
       return serializeData(data);
@@ -378,13 +385,14 @@ export const getThemePackagesForHome = cache(unstableCache(
       console.error("Error getting theme packages for home:", error);
       return {};
     }
+    }, 3600);
   },
   ["theme-packages-home-v2"],
-  { revalidate: 60 }
+  { revalidate: 3600 }
 ));
 
-export const getElitePackages = unstableCache(
-  async () => {
+export const getElitePackages = unstableCache(async () => {
+    return withRedisCache("published_packages", "elite", async () => {
     try {
       const packages = await getPackagesByTheme("elite-escape", [], []);
       return serializeData(packages);
@@ -392,13 +400,14 @@ export const getElitePackages = unstableCache(
       console.error("Error getting elite packages:", error);
       return [];
     }
+    }, 3600);
   },
   ["elite-packages"],
-  { revalidate: 60 }
+  { revalidate: 3600 }
 );
 
-export const getRomanticPackages = unstableCache(
-  async () => {
+export const getRomanticPackages = unstableCache(async () => {
+    return withRedisCache("published_packages", "romantic", async () => {
     try {
       const packages = await getPackagesByTheme("romantic-getaways", [], []);
       return serializeData(packages);
@@ -406,13 +415,14 @@ export const getRomanticPackages = unstableCache(
       console.error("Error getting romantic packages:", error);
       return [];
     }
+    }, 3600);
   },
   ["romantic-packages"],
-  { revalidate: 60 }
+  { revalidate: 3600 }
 );
 
-export const getWhyChooseRegionData = unstableCache(
-  async (regionId) => {
+export const getWhyChooseRegionData = unstableCache(async (regionId) => {
+    return withRedisCache("why_choose_region", regionId, async () => {
     try {
       const docRef = doc(db, COLLECTIONS.WHY_CHOOSE_REGION, regionId);
       const docSnap = await getDocFromServer(docRef);
@@ -427,9 +437,10 @@ export const getWhyChooseRegionData = unstableCache(
       console.error(`Error getting why choose region data for ${regionId}:`, error);
       return null;
     }
+    }, 86400);
   },
   ["why-choose-region"],
-  { revalidate: 60 }
+  { revalidate: 86400 }
 );
 
 

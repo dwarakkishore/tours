@@ -34,17 +34,17 @@ const SplashScreen = () => {
       });
     }
 
-    // If video doesn't load within 2 seconds, skip the splash screen
+    // If video doesn't load within 1 second, skip the splash screen
     const videoLoadTimeout = setTimeout(() => {
       if (!videoLoaded) {
         handleHideSplash();
       }
-    }, 2000);
+    }, 1000);
 
-    // Safety timeout: hide splash screen after 6 seconds regardless of video state
+    // Safety timeout: hide splash screen after 2 seconds regardless of video state
     const safetyTimeout = setTimeout(() => {
       handleHideSplash();
-    }, 6000);
+    }, 2000);
 
     return () => {
       // ALWAYS remove no-scroll class when component unmounts
