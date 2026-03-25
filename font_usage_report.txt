@@ -1,0 +1,131 @@
+src/app/blogs/page.jsx:            <div className="flex flex-col text-center font-nord">
+src/app/blogs/page.jsx:            <div className="text-center font-nord">
+src/app/blogs/page.jsx:            <h3 className="mb-2 font-nord text-3xl font-bold">
+src/app/layout.jsx:  variable: "--font-nord",
+src/app/layout.jsx:  variable: "--font-playfair",
+src/app/layout.jsx:  variable: "--font-cormorant",
+src/app/layout.jsx:  variable: "--font-sora",
+src/app/layout.jsx:        className={`${outfit.variable} ${nord.variable} ${playfair.variable} ${cormorant.variable} ${sora.variable} font-sans antialiased`}
+src/app/layout.jsx:          fontFamily: 'var(--font-sora), sans-serif',
+src/app/layout.jsx:            .splash-brand-name { font-family: var(--font-sora), sans-serif; font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 700; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 0.02em; margin-bottom: 0.5rem; line-height: 1.1; text-shadow: 0 4px 20px rgba(30, 64, 175, 0.2); animation: splash-textShimmer 3s linear infinite; background-size: 200% auto; }
+src/app/layout.jsx:            .splash-tagline { font-family: var(--font-sora), sans-serif; font-size: clamp(1rem, 1.5vw, 1.25rem); font-weight: 500; color: #1e293b; letter-spacing: 0.05em; margin-bottom: 4rem; animation: splash-taglineEntrance 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both; }
+src/app/layout.jsx:            .splash-loading-text { font-family: var(--font-sora), sans-serif; font-size: 1rem; font-weight: 600; color: #1e293b; letter-spacing: 0.05em; margin-bottom: 1.5rem; }
+src/app/layout.jsx:            .splash-journey-text { margin-top: 2.5rem; font-family: var(--font-sora), sans-serif; font-size: clamp(1rem, 2vw, 1.125rem); font-weight: 400; color: #64748b; font-style: italic; letter-spacing: 0.03em; animation: splash-journeyPulse 3s ease-in-out infinite; }
+src/app/contact/page.jsx:          <p className="font-great-vibes text-2xl md:text-3xl text-white/90 mb-4 tracking-wider animate-fadeInUp">
+src/app/(protected)/account/layout.jsx:              <h1 className="text-4xl md:text-6xl font-nord font-black text-white uppercase tracking-tight leading-none">
+src/app/(protected)/account/docs/page.jsx:            <h5 className="absolute left-8 top-0 -translate-y-1/2 bg-white px-2 font-nord font-bold uppercase text-brand-blue">
+src/app/(protected)/account/profile/page.jsx:              <h2 className="text-3xl md:text-4xl font-nord font-black text-slate-900 uppercase tracking-tight">Profile Information</h2>
+src/app/(protected)/account/profile/page.jsx:                    <h5 className="font-nord font-bold uppercase tracking-[0.3em] text-red-500/40 text-[10px] mb-1">Authorization</h5>
+src/app/themes/group-departure/page.jsx:                        <h4 className="font-nord font-bold text-xl mb-3 text-slate-900 line-clamp-1">Exclusive Access</h4>
+src/app/themes/group-departure/page.jsx:                        <h4 className="font-nord font-bold text-xl mb-3 text-slate-900 line-clamp-1">24/7 Concierge</h4>
+src/app/globals.css:  font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
+src/components/ui/GlobalTravelLoader.jsx:        <span className="text-[#0146b3] font-serif text-2xl md:text-3xl font-black tracking-widest uppercase">
+src/components/ui/WaveAnimation.jsx:        <h3 className="mb-4 font-nord text-base font-medium uppercase text-white sm:text-lg">
+src/components/ui/ThemedPackageCard.jsx:      ratingBadge: "bg-[#1a1a1a] px-3 py-1.5 rounded-none border border-[#d4af37] shadow-lg flex items-center gap-1.5 text-white font-serif text-xs",
+src/components/ui/ThemedPackageCard.jsx:      locationBadge: "bg-[#faf9f7]/90 backdrop-blur-lg text-[#1a1a1a] px-4 py-2 rounded-none border-l-2 border-[#d4af37] font-serif uppercase tracking-widest text-[10px] bottom-5 left-5",
+src/components/ui/ThemedPackageCard.jsx:      durationBadge: "bg-[#d4af37] text-white px-4 py-2 rounded-none font-serif uppercase tracking-widest text-[10px] bottom-5 right-5",
+src/components/ui/ThemedPackageCard.jsx:      title: "font-serif text-xl sm:text-2xl text-[#1a1a1a] font-medium leading-tight mb-2 italic",
+src/components/ui/ThemedPackageCard.jsx:      highlightText: "text-[#5a5a5a] font-serif text-sm italic",
+src/components/ui/ThemedPackageCard.jsx:      priceLabel: "font-serif text-[10px] sm:text-[11px] text-[#8b7355] uppercase tracking-[0.2em] mb-0.5",
+src/components/ui/ThemedPackageCard.jsx:      price: "font-serif text-2xl sm:text-3xl text-[#1a1a1a]",
+src/components/ui/ThemedPackageCard.jsx:      title: "font-serif text-xl sm:text-2xl text-[#292524] mb-2 leading-relaxed tracking-tight",
+src/components/ui/ThemedPackageCard.jsx:      price: "font-serif text-2xl sm:text-3xl text-[#44403c] font-light",
+src/components/ui/sliders/LoginSlider.jsx:            <h4 className="mb-4 font-nord text-3xl font-bold uppercase">
+src/components/ui/ExplorationList.jsx:        <h3 className="text-2xl font-bold text-slate-400 font-serif lowercase italic">No packages found for this theme and region.</h3>
+src/components/Landing/AnimatedText.jsx:        className="text-lg font-damion text-[#8C8C8C] over"
+src/components/Landing/CommonCarousel.jsx:                <p className="text-slate-400 font-medium font-nord">Coming Soon</p>
+src/components/Landing/Hero.jsx:          {/* <div className="text-center font-bold text-xl sm:text-3xl text-white px-10 pt-10 font-nord">
+src/components/Landing/Hero.jsx:      font-nord
+src/components/Landing/ThemeHighlights.jsx:                    <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold font-nord text-white mb-3 sm:mb-4 drop-shadow-lg leading-tight">
+src/components/Landing/ThemeHighlights.jsx:                    <p className="text-base sm:text-lg md:text-xl font-damion text-slate-100 drop-shadow-md mb-6 sm:mb-8">
+src/components/Forms/EnquiryForm/ConfirmationDialog.jsx:        <h2 className="font-nord text-xl font-bold text-brand-blue">
+src/components/Forms/EnquiryForm/LeadForm.jsx:            <AlertDialogTitle className="text-left font-nord text-lg font-medium text-brand-blue c-md:text-2xl px-8 uppercase tracking-widest">
+src/components/Destinations/DestinationsHero.jsx:          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-white drop-shadow-2xl mb-6 font-nord uppercase">
+src/components/TimedCardsSlider-old/Card.jsx:            <h2 className="mb-2 font-nord text-7xl font-black uppercase">
+src/components/Checkout/BookingDetails.jsx:      <h5 className="absolute left-6 top-0 inline-block -translate-y-1/2 bg-white px-3 font-nord font-bold uppercase text-brand-blue">
+src/components/Checkout/TravellerCount.jsx:      <h5 className="absolute left-6 top-0 inline-block -translate-y-1/2 bg-white px-3 font-nord font-bold uppercase text-brand-blue">
+src/components/Checkout/DepartureDate.jsx:      <h5 className="absolute left-6 top-0 inline-block -translate-y-1/2 bg-white px-3 font-nord font-bold uppercase text-brand-blue">
+src/components/Explore/ExploreHero.jsx:          <h1 className="text-xl sm:text-3xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-[0_4px_30px_rgba(0,0,0,0.8)] font-nord leading-tight sm:leading-[1.1] mb-6">
+src/components/Explore/ExploreHero.jsx:            EXPLORE EXTRAORDINARY <span className="italic font-serif font-light text-brand-blue">Journeys</span>
+src/components/Explore/ExploreListing.jsx:                  <h3 className="text-2xl font-black text-slate-900 mb-3 tracking-tight italic font-serif">A Little Too Unique...</h3>
+src/components/Profile/AddressPanel.jsx:                <h5 className="font-nord font-bold uppercase tracking-[0.25em] text-brand-blue/40 text-[10px] mb-0.5">
+src/components/Profile/AddressPanel.jsx:                    <label className="text-[10px] font-nord font-bold uppercase tracking-[0.2em] text-slate-400 ml-1">Street Address</label>
+src/components/Profile/AddressPanel.jsx:                    <label className="text-[10px] font-nord font-bold uppercase tracking-[0.2em] text-slate-400 ml-1">City</label>
+src/components/Profile/AddressPanel.jsx:                    <label className="text-[10px] font-nord font-bold uppercase tracking-[0.2em] text-slate-400 ml-1">State / Province</label>
+src/components/Profile/AddressPanel.jsx:                    <label className="text-[10px] font-nord font-bold uppercase tracking-[0.2em] text-slate-400 ml-1">Postal Code</label>
+src/components/Profile/AddressPanel.jsx:                    <label className="text-[10px] font-nord font-bold uppercase tracking-[0.2em] text-slate-400 ml-1">Country</label>
+src/components/Profile/GenderPanel.jsx:                <h5 className="font-nord font-bold uppercase tracking-[0.25em] text-brand-blue/40 text-[10px] mb-0.5">
+src/components/Profile/PhonePanel.jsx:                <h5 className="font-nord font-bold uppercase tracking-[0.25em] text-brand-blue/40 text-[10px] mb-0.5">
+src/components/Profile/PhonePanel.jsx:                  <label className="text-[10px] font-nord font-bold uppercase tracking-[0.2em] text-slate-400 ml-1">New Phone Number</label>
+src/components/Profile/PhonePanel.jsx:                  <label className="text-[10px] font-nord font-bold uppercase tracking-[0.2em] text-slate-400 ml-1">Verification Code</label>
+src/components/Profile/NamePanel.jsx:                <h5 className="font-nord font-bold uppercase tracking-[0.25em] text-brand-blue/40 text-[10px] mb-0.5">
+src/components/Profile/NamePanel.jsx:                    <label className="text-[10px] font-nord font-bold uppercase tracking-[0.2em] text-slate-400 ml-1">First Name</label>
+src/components/Profile/NamePanel.jsx:                    <label className="text-[10px] font-nord font-bold uppercase tracking-[0.2em] text-slate-400 ml-1">Last Name</label>
+src/components/Profile/EmailPanel.jsx:                <h5 className="font-nord font-bold uppercase tracking-[0.25em] text-brand-blue/40 text-[10px] mb-0.5">
+src/components/Profile/EmailPanel.jsx:                  <label className="text-[10px] font-nord font-bold uppercase tracking-[0.2em] text-slate-400 ml-1">New Email Address</label>
+src/components/Packages/RegionQuickFacts.jsx:              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-slate-900 tracking-tighter leading-tight md:leading-[0.95] mb-2 md:mb-4">
+src/components/Packages/RegionQuickFacts.jsx:              <h3 className="text-2xl font-serif text-slate-900 mb-8 border-b border-blue-100 pb-3 inline-block">Why Choose {regionName}?</h3>
+src/components/Packages/RegionQuickFacts.jsx:              <h3 className="text-2xl font-serif text-slate-900 mb-8 border-b border-blue-100 pb-3 inline-block">Must-Experience Attractions</h3>
+src/components/Packages/PackageHero.jsx:                  className="text-white font-bold text-4xl md:text-5xl lg:text-6xl leading-tight lg:leading-[1.1] tracking-tight drop-shadow-2xl max-w-4xl font-serif"
+src/components/Packages/PackageHero.jsx:                  style={{ fontFamily: "var(--font-playfair), serif" }}
+src/components/Packages/WhyBayardVacations.jsx:              Why Choose <span className="text-brand-blue italic font-serif">Bayard Vacations</span>?
+src/components/Categories/Categories.jsx:        <h2 className="font-nord text-4xl font-black text-brand-blue">
+src/components/Themes/RelaxRejuvenateClient.jsx:                <p className="text-sage-700 font-serif italic text-lg md:text-4xl opacity-80 mb-2">
+src/components/Themes/RelaxRejuvenateClient.jsx:                <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-[9rem] font-serif text-stone-900 leading-[0.9] tracking-tight lowercase">
+src/components/Themes/RelaxRejuvenateClient.jsx:              <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif text-stone-900 lowercase italic leading-tight md:leading-normal">The Three Pillars of Serenity</h2>
+src/components/Themes/RelaxRejuvenateClient.jsx:                      <h3 className="text-2xl font-serif italic text-stone-900 lowercase">{pillar.title}</h3>
+src/components/Themes/RelaxRejuvenateClient.jsx:              <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif text-stone-900 leading-tight">Handpicked <br />Sanctuaries</h2>
+src/components/Themes/RelaxRejuvenateClient.jsx:                   <h2 className="text-4xl sm:text-6xl md:text-8xl font-serif text-stone-900 tracking-tight leading-loose md:leading-none lowercase italic">
+src/components/Themes/FamilyFunventureClient.jsx:          <div className="text-[20rem] font-serif text-orange-500 pointer-events-none">&ldquo;</div>
+src/components/Themes/FamilyFunventureClient.jsx:          <div className="text-[20rem] font-serif text-teal-500 pointer-events-none">&rdquo;</div>
+src/components/Themes/ThemeGrid.jsx:            <h3 className="text-2xl lg:text-3xl font-bold text-white tracking-tight font-klausen">
+src/components/Themes/ExplorationBundleClient.jsx:                <span className="block text-[#2a9d8f] text-4xl md:text-5xl lg:text-6xl mt-4 font-serif italic font-normal">Curated Expeditions</span>
+src/components/Themes/ExplorationBundleClient.jsx:                  <p className="text-2xl font-serif italic text-gray-500">The map for this region is currently being drawn.</p>
+src/components/Themes/ReligiousRetreatClient.jsx:              <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif font-light leading-[1.1]">
+src/components/Themes/ReligiousRetreatClient.jsx:                  <div className="text-3xl font-serif text-burgundy-700">100+</div>
+src/components/Themes/ReligiousRetreatClient.jsx:                  <div className="text-3xl font-serif text-gold-600">40+</div>
+src/components/Themes/ReligiousRetreatClient.jsx:                  <div className="text-3xl font-serif text-sapphire-600 underline decoration-gold-400 decoration-wavy underline-offset-8">Centuries</div>
+src/components/Themes/ReligiousRetreatClient.jsx:                        <div className="font-serif text-burgundy-900 text-lg">Spiritual Sanctuary</div>
+src/components/Themes/ReligiousRetreatClient.jsx:              <h3 className="text-xl md:text-2xl font-serif text-burgundy-900 mb-2 md:mb-4 tracking-tight">Divine Architecture</h3>
+src/components/Themes/ReligiousRetreatClient.jsx:            <h2 className="text-4xl md:text-5xl font-serif text-burgundy-700 mb-4">Holy Destinations</h2>
+src/components/Themes/ReligiousRetreatClient.jsx:                        "cursor-pointer rounded-xl h-14 w-14 bg-white border-amber-100 text-amber-900 hover:bg-amber-700 hover:text-white transition-all shadow-xl font-serif",
+src/components/Themes/ReligiousRetreatClient.jsx:                            "cursor-pointer rounded-xl h-14 w-14 bg-white font-serif font-black transition-all border-amber-100 shadow-md",
+src/components/Themes/ReligiousRetreatClient.jsx:                        "cursor-pointer rounded-xl h-14 w-14 bg-white border-amber-100 text-amber-900 hover:bg-amber-700 hover:text-white transition-all shadow-xl font-serif",
+src/components/Themes/ReligiousRetreatClient.jsx:              <h2 className="text-5xl sm:text-7xl md:text-9xl font-serif text-burgundy-900 tracking-tight leading-none">
+src/components/Themes/ReligiousRetreatClient.jsx:            <p className="text-xl md:text-2xl text-stone-500 font-serif leading-relaxed max-w-3xl mx-auto font-light border-y border-gold-400/20 py-8">
+src/components/Themes/ReligiousRetreatClient.jsx:                  className="h-20 px-16 rounded-full bg-burgundy-900 hover:bg-stone-900 text-gold-400 font-serif text-xl tracking-widest shadow-2xl transition-all duration-700 hover:scale-105 active:scale-95 border-none"
+src/components/Themes/ReligiousRetreatClient.jsx:              <Link href="/contact" className="group flex items-center gap-4 text-burgundy-900 font-serif text-sm tracking-widest uppercase border-b border-gold-400 pb-2 hover:text-gold-600 transition-all">
+src/components/Themes/EliteEscapeClient.jsx:            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-light leading-tight">
+src/components/Themes/EliteEscapeClient.jsx:                  <h3 className="text-white font-serif text-2xl">Exclusive Resorts</h3>
+src/components/Themes/EliteEscapeClient.jsx:              <h2 className="text-4xl md:text-5xl font-serif text-[#1a1a1a] mb-4">Curated Destinations</h2>
+src/components/Themes/EliteEscapeClient.jsx:              <div className="col-span-full py-16 text-center text-[#8b7355] font-serif italic text-2xl">
+src/components/Themes/EliteEscapeClient.jsx:              <h3 className="text-2xl font-serif text-[#1a1a1a] mb-6">24/7 Concierge</h3>
+src/components/Themes/EliteEscapeClient.jsx:              <h3 className="text-2xl font-serif text-[#1a1a1a] mb-6">Private Aviation</h3>
+src/components/Themes/EliteEscapeClient.jsx:              <h3 className="text-2xl font-serif text-[#1a1a1a] mb-6">Discreet Security</h3>
+src/components/Themes/RomanticGetawaysClient.jsx:                <p className="text-rose-500 font-great-vibes text-4xl md:text-6xl tracking-wide ml-1 drop-shadow-sm">
+src/components/Themes/RomanticGetawaysClient.jsx:            <h2 className="text-4xl md:text-7xl font-serif text-slate-900 tracking-tight leading-tight">
+src/components/Themes/RomanticGetawaysClient.jsx:                  Why Trust Us With Your <span className="text-rose-500 italic font-serif">Heart?</span>
+src/components/Themes/EducationalToursClient.jsx:              <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif font-bold leading-[0.9]">
+src/components/Themes/EducationalToursClient.jsx:                  <div className="text-3xl font-serif font-bold text-indigo-900">150+</div>
+src/components/Themes/EducationalToursClient.jsx:                  <div className="text-3xl font-serif font-bold text-amber-600">4.9</div>
+src/components/Themes/EducationalToursClient.jsx:                  <div className="text-3xl font-serif font-bold text-indigo-900">12k+</div>
+src/components/Themes/EducationalToursClient.jsx:                        <div className="text-3xl font-serif">Ancient Civilizations Field Study</div>
+src/components/Themes/EducationalToursClient.jsx:                <div className="text-4xl font-serif font-bold text-indigo-900">04</div>
+src/components/Themes/EducationalToursClient.jsx:                    <p className="text-sm text-slate-700 italic font-serif leading-snug">"The world is a book and those who do not travel read only one page."</p>
+src/components/Themes/EducationalToursClient.jsx:            <h2 className="text-4xl md:text-5xl font-serif font-bold text-indigo-950 mb-4">Academic Itineraries</h2>
+src/components/Themes/EducationalToursClient.jsx:                    <p className="text-slate-500 text-xl font-serif italic">The curriculum for this region is currently being curated.</p>
+src/components/Themes/EducationalToursClient.jsx:              <h3 className="text-2xl font-serif font-bold text-white mb-4">Accredited Learning</h3>
+src/components/Themes/EducationalToursClient.jsx:              <h3 className="text-2xl font-serif font-bold text-white mb-4">Expert Faculty</h3>
+src/components/Themes/EducationalToursClient.jsx:              <h3 className="text-2xl font-serif font-bold text-white mb-4">Research Focused</h3>
+src/components/ShareItinerary/ShareableHeader.jsx:              <p className="font-great-vibes text-xl lg:text-3xl text-white/90 mb-1 tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+src/components/ShareItinerary/ShareableHeader.jsx:            <p className="font-great-vibes text-2xl lg:text-4xl xl:text-5xl mb-2 bg-gradient-to-b from-yellow-200 via-yellow-400 to-yellow-600 bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(0,0,0,0.9)] filter drop-shadow(0_0_20px_rgba(0,0,0,0.5)) -rotate-3 translate-y-1 tracking-[0.05em] select-none py-2 px-4 inline-block [-webkit-text-stroke:0.5px_rgba(0,0,0,0.2)]">
+src/components/ShareItinerary/ShareableHighlights.jsx:          <p className="font-great-vibes text-4xl md:text-5xl text-brand-blue mb-2 print:text-3xl">
+src/components/ShareItinerary/ShareableItineraryBook.jsx:                          <h1 className="font-playfair text-4xl lg:text-5xl xl:text-6xl text-slate-900 leading-[1.1] tracking-tight">
+src/components/ShareItinerary/ShareableItineraryBook.jsx:                            <span className="font-great-vibes text-brand-blue text-5xl lg:text-6xl xl:text-7x relative -top-3 -left-1">Itinerary</span>
+src/components/ShareItinerary/ShareableItineraryBook.jsx:                          <span className="absolute -left-4 top-0 text-7xl lg:text-8xl font-playfair font-black text-slate-100/80 -z-10 transition-colors group-hover/usp:text-brand-blue/5">
+src/components/ShareItinerary/ShareableItineraryBook.jsx:                          <h1 className="font-playfair text-4xl lg:text-5xl xl:text-6xl text-slate-900 leading-[1.1] tracking-tight">
+src/components/ShareItinerary/ShareableItineraryBook.jsx:                            <span className="font-great-vibes text-brand-blue text-5xl lg:text-6xl xl:text-7x relative -top-3 -right-1">Of Memories</span>
+src/components/ShareItinerary/ShareableItineraryBook.jsx:                       <p className="text-xl lg:text-2xl font-playfair text-slate-800 italic leading-relaxed">
+src/components/TimedCardSlider/SliderCard.jsx:      <motion.div className="absolute z-10 flex size-full items-end font-nord">
+src/components/TimedCardSlider/OtherInfo.jsx:        className="overflow-hidden font-nord text-xs font-medium uppercase text-[#d5d5d6] md:text-base"
+src/components/TimedCardSlider/OtherInfo.jsx:        className="my-1 font-nord text-2xl font-semibold uppercase tracking-tighter md:my-3 md:leading-[56px] c-lg:text-5xl"

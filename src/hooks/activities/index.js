@@ -1,0 +1,1 @@
+export { useActivitiesData } from './useActivitiesData';

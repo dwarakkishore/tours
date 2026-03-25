@@ -1,0 +1,170 @@
+/* ============================================
+   PRINT STYLES FOR SHAREABLE ITINERARY
+   ============================================ */
+
+@media print {
+  /* Reset body and html for printing */
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
+
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  body {
+    background: white !important;
+    overflow: visible !important;
+  }
+
+  /* Hide navigation, buttons, and interactive elements */
+  nav,
+  header:not(.print-header),
+  footer:not(.print-footer),
+  button,
+  [class*="print:hidden"],
+  [class*="sticky"],
+  [class*="fixed"],
+  .no-print {
+    display: none !important;
+  }
+
+  /* Force proper page breaks */
+  [class*="print:break-inside-avoid"] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  [class*="print:break-after"] {
+    break-after: page;
+    page-break-after: always;
+  }
+
+  [class*="print:break-before"] {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* Optimize text for printing */
+  * {
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Allow specific backgrounds for branding */
+  [class*="print:bg-white"],
+  [class*="print:bg-slate-50"],
+  [class*="bg-slate-50"],
+  [class*="bg-blue-50"],
+  [class*="bg-green-50"],
+  [class*="bg-red-50"],
+  [class*="bg-emerald-50"] {
+    background: #f8fafc !important;
+  }
+
+  /* Ensure links are visible */
+  a {
+    text-decoration: underline !important;
+  }
+
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666 !important;
+  }
+
+  /* Optimize images */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Remove animations and transitions */
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Optimize spacing */
+  [class*="print:py-6"] {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  [class*="print:py-4"] {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  [class*="print:mb-4"] {
+    margin-bottom: 1rem !important;
+  }
+
+  [class*="print:mb-3"] {
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Keep borders visible */
+  [class*="print:border"],
+  [class*="print:border-slate-200"] {
+    border: 1px solid #e2e8f0 !important;
+  }
+
+  /* Ensure proper font sizes */
+  [class*="print:text-xs"] {
+    font-size: 0.75rem !important;
+  }
+
+  [class*="print:text-sm"] {
+    font-size: 0.875rem !important;
+  }
+
+  [class*="print:text-base"] {
+    font-size: 1rem !important;
+  }
+
+  [class*="print:text-lg"] {
+    font-size: 1.125rem !important;
+  }
+
+  /* Force important colors for branding */
+  .text-brand-blue,
+  [class*="print:text-brand-blue"] {
+    color: #0146b3 !important;
+  }
+
+  .text-slate-900,
+  [class*="print:text-slate-900"] {
+    color: #0f172a !important;
+  }
+
+  .text-slate-600,
+  [class*="print:text-slate-600"] {
+    color: #475569 !important;
+  }
+
+  .text-slate-700,
+  [class*="print:text-slate-700"] {
+    color: #334155 !important;
+  }
+
+  /* Remove shadows */
+  [class*="print:shadow-none"] {
+    box-shadow: none !important;
+  }
+
+  /* Optimize rounded corners for print */
+  [class*="print:rounded-xl"] {
+    border-radius: 0.75rem !important;
+  }
+
+  [class*="print:rounded-2xl"] {
+    border-radius: 1rem !important;
+  }
+}
