@@ -24,6 +24,7 @@ export default function GroupDeparture({ groupDeparturePackages }) {
             <div className="flex flex-col c-lg:flex-row items-center gap-4">
               <Link
                 href="/themes/group-departure"
+                prefetch={false}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-blue text-white hover:bg-brand-blue-hovered transition-all font-semibold text-sm whitespace-nowrap"
               >
                 View All Departures

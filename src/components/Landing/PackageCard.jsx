@@ -61,17 +61,14 @@ const LandingPackageCard = ({ item, className, isGroup = false }) => {
       "block relative overflow-hidden rounded-2xl md:rounded-3xl group h-[380px] sm:h-[450px] shadow-lg hover:shadow-2xl transition-all duration-500",
       className
     )}>
-      <Link href={href} className="block w-full h-full">
+      <Link href={href} className="block w-full h-full" prefetch={false}>
         {/* Swiper Background */}
         <div className="absolute inset-0 bg-slate-900">
           <Swiper
             modules={[Navigation, Autoplay, Pagination]}
             onSwiper={setSwiper}
             loop={validImages.length > 1}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-            }}
+            autoplay={false}
             pagination={{
               clickable: true,
               bulletClass: "swiper-pagination-bullet !size-1.5 !bg-white !opacity-50",

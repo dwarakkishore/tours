@@ -11,6 +11,7 @@ import { SITE_DATA } from "@/config";
 import JsonLd from "@/components/Seo/JsonLd";
 import Hero from "@/components/Landing/Hero";
 import dynamic from "next/dynamic";
+import LazySection from "@/components/ui/LazySection";
 
 const ExploreDestinations = dynamic(() => import("@/components/Landing/Destinations/ExploreDestinations"));
 const Holidays = dynamic(() => import("@/components/Landing/Holidays"));
@@ -145,31 +146,45 @@ const HomePage = () => {
       </section>
 
       <Suspense fallback={<div className="h-96 bg-slate-50 animate-pulse" />}>
-        <section className="bg-white section-padding blue-section">
+      <LazySection rootMargin="400px" className="blue-section">
+        <section className="bg-white section-padding">
           <ExploreDestinationsSection />
         </section>
         <HolidaysSection />
+      </LazySection>
       </Suspense>
 
       <Suspense fallback={<div className="h-64 bg-slate-50 animate-pulse m-8 rounded-3xl" />}>
-        <AdBannerSection />
+        <LazySection rootMargin="300px">
+          <AdBannerSection />
+        </LazySection>
       </Suspense>
 
       <Suspense fallback={<div className="h-96 bg-slate-50 animate-pulse" />}>
-        <ThemeHighlightsSection />
+        <LazySection rootMargin="300px">
+          <ThemeHighlightsSection />
+        </LazySection>
       </Suspense>
 
       <Suspense fallback={<div className="h-96 bg-white animate-pulse" />}>
-        <GroupDepartureSection />
+        <LazySection rootMargin="300px">
+          <GroupDepartureSection />
+        </LazySection>
       </Suspense>
       
       <section className="bg-gradient-to-br from-[#0146b3] to-[#020617] section-padding text-white relative overflow-hidden">
-        <WhyBayard />
+        <LazySection rootMargin="300px">
+          <WhyBayard />
+        </LazySection>
       </section>
       
       <Suspense fallback={<div className="h-96 bg-slate-50 animate-pulse" />}>
-        <InspirationSectionSection />
-        <TestimonialsSection />
+        <LazySection rootMargin="300px">
+          <InspirationSectionSection />
+        </LazySection>
+        <LazySection rootMargin="300px">
+          <TestimonialsSection />
+        </LazySection>
       </Suspense>
 
       <JsonLd

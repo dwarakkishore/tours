@@ -121,7 +121,7 @@ function SwipeCard({ card, onSwipe, isTop, index, exitDirection }) {
                 {card.subtitle}
               </p>
             </div>
-            <Link href={card.link || '#'} className="px-4 py-2 rounded-full bg-white/20 backdrop-blur-md flex items-center gap-2 hover:bg-white/30 transition-all text-white text-sm font-semibold group">
+            <Link href={card.link || '#'} prefetch={false} className="px-4 py-2 rounded-full bg-white/20 backdrop-blur-md flex items-center gap-2 hover:bg-white/30 transition-all text-white text-sm font-semibold group">
               <span>View Deal</span>
               <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-brand-blue transition-colors">
                 <ArrowRight className="w-3 h-3" />

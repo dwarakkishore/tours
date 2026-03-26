@@ -81,6 +81,7 @@ const Hero = () => {
           loop
           muted
           playsInline
+          preload="none"
         >
           <source
             src="https://cdn.bayardvacations.com/images/1770397237699-0206__1__1_.mp4"
@@ -209,6 +210,7 @@ const Hero = () => {
                               <li key={region.id || region.slug}>
                                 <Link
                                   href={`/packages/${region.slug}`}
+                                  prefetch={false}
                                   className="flex items-center gap-3 hover:bg-brand-blue/10 p-2 rounded"
                                   onClick={() => setShowDropdown(false)}
                                 >
@@ -235,6 +237,7 @@ const Hero = () => {
                               <li key={pkg.id}>
                                 <Link
                                   href={`/packages/${pkg.region}/${pkg.packageSlug}`}
+                                  prefetch={false}
                                   className="flex items-center gap-3 hover:bg-brand-blue/10 p-2 rounded"
                                   onClick={() => setShowDropdown(false)}
                                 >
@@ -274,6 +277,7 @@ const Hero = () => {
                                 <li key={pkg}>
                                   <Link
                                     href={`/packages/${pkg}`}
+                                    prefetch={false}
                                     className="flex items-center gap-3 hover:bg-brand-blue/10 p-2 rounded"
                                     onClick={() => setShowDropdown(false)}
                                   >
@@ -327,6 +331,7 @@ const Hero = () => {
           {/* Left Side: Explore */}
           <Link 
             href="/explore"
+            prefetch={false}
             className="pointer-events-auto group flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-white hover:bg-white/20 transition-all duration-300 shadow-xl hover:shadow-brand-blue/20 hover:-translate-y-1"
           >
             <div className="bg-brand-blue/80 p-1 sm:p-1.5 rounded-full">
@@ -341,6 +346,7 @@ const Hero = () => {
           {/* Right Side: Contact */}
           <Link 
             href="/contact"
+            prefetch={false}
             className="pointer-events-auto group flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-white hover:bg-white/20 transition-all duration-300 shadow-xl hover:shadow-brand-blue/20 hover:-translate-y-1"
           >
             <div className="flex flex-col items-end leading-none">
@@ -357,6 +363,7 @@ const Hero = () => {
         <div className="sm:hidden relative z-40 flex gap-3 w-full px-4 mt-6 pb-4">
           <Link 
             href="/explore"
+            prefetch={false}
             className="flex-1 flex items-center justify-center gap-2 bg-white/10 backdrop-blur-xl border border-white/20 px-4 py-2.5 rounded-xl text-white hover:bg-white/20 transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.2)] active:scale-95"
           >
             <div className="bg-brand-blue/80 p-1 rounded-full">
@@ -367,6 +374,7 @@ const Hero = () => {
 
           <Link 
             href="/contact"
+            prefetch={false}
             className="flex-1 flex items-center justify-center gap-2 bg-white/10 backdrop-blur-xl border border-white/20 px-4 py-2.5 rounded-xl text-white hover:bg-white/20 transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.2)] active:scale-95"
           >
             <span className="text-xs font-bold tracking-tight">Contact</span>

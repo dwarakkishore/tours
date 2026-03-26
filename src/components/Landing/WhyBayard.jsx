@@ -134,6 +134,7 @@ export default function WhyBayard() {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-2 md:mt-4 w-auto">
              <Link 
                href="/explore" 
+               prefetch={false}
                className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-300 hover:to-yellow-500 text-brand-blue flex items-center justify-center gap-2 px-6 py-3 md:px-10 md:py-4 rounded-full font-bold text-sm md:text-lg transition-all transform hover:scale-105 shadow-[0_10px_30px_rgba(234,179,8,0.4)]"
              >
                 Explore Packages

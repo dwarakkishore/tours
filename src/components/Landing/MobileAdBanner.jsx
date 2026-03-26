@@ -168,7 +168,7 @@ const MobileAdBanner = ({ bannerData }) => {
           {content.subtitle}
         </p>
 
-        <Link href="/explore" className="bg-white text-[#1a5fb4] border-none px-10 py-3.5 rounded-full text-base font-bold cursor-pointer inline-flex items-center gap-2 shadow-lg hover:scale-105 active:scale-95 transition-transform mb-6">
+        <Link href="/explore" prefetch={false} className="bg-white text-[#1a5fb4] border-none px-10 py-3.5 rounded-full text-base font-bold cursor-pointer inline-flex items-center gap-2 shadow-lg hover:scale-105 active:scale-95 transition-transform mb-6">
           Explore
           <div className="w-6 h-6 bg-[#1a5fb4] rounded-full flex items-center justify-center text-white text-xs">
             <ArrowRight className="w-3.5 h-3.5" />

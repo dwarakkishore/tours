@@ -65,7 +65,7 @@ const CommonCarousel = ({
 
         {viewAllLink && (
           <Button asChild variant="outline" className="rounded-full border-brand-blue text-brand-blue hover:bg-brand-blue/5 font-bold hidden md:flex">
-            <Link href={viewAllLink}>
+            <Link href={viewAllLink} prefetch={false}>
               {viewAllText} <ArrowRight className="ml-2 size-4" />
             </Link>
           </Button>

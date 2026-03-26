@@ -141,6 +141,7 @@ export default function AdvertisementBanner({ bannerData }) {
             {/* CTA Button */}
             <Link
               href={contentSection.cta.link}
+              prefetch={false}
               className="group inline-flex items-center gap-2 bg-white text-brand-blue px-5 py-2.5 rounded-full text-sm font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
             >
               {contentSection.cta.text}
@@ -174,6 +175,7 @@ export default function AdvertisementBanner({ bannerData }) {
               >
                 <Link 
                   href={mediaLink}
+                  prefetch={false}
                   className="block w-full h-full cursor-pointer group"
                 >
                   <img

@@ -160,6 +160,7 @@ const HeaderNav = ({ onHover, internationalRegions = [], domesticRegions = [] })
             <Link
               className="flex items-center gap-1 opacity-80 transition duration-300 hover:opacity-100"
               href={item.href}
+              prefetch={false}
               onMouseEnter={() => handleMouseEnter(item)}
             >
               <span>{item.title}</span>

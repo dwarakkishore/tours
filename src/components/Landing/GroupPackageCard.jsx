@@ -85,7 +85,7 @@ const GroupPackageCard = ({ item, className }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Link href={href} className="block w-full h-full">
+      <Link href={href} className="block w-full h-full" prefetch={false}>
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image

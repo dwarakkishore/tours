@@ -33,12 +33,12 @@ export default function StartJourney() {
             
             <div className="flex gap-4">
               <Button asChild size="lg" className="gradient-btn rounded-full px-8 py-6 hover:scale-105 transition-transform shadow-xl">
-                <Link href="/explore">
+                <Link href="/explore" prefetch={false}>
                   Explore Packages <ArrowRight className="ml-2 size-4" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full border-brand-blue text-brand-blue hover:bg-brand-blue/5 px-8">
-                <Link href="/contact">
+                <Link href="/contact" prefetch={false}>
                   Plan Your Trip
                 </Link>
               </Button>

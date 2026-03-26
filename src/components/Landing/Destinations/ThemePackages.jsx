@@ -355,6 +355,7 @@ export default function ThemePackages() {
                     <div className="pt-2"> 
                       <Link
                         href={`/themes/${card.slug.split("?")[0]}`}
+                        prefetch={false}
                         className={`inline-flex items-center gap-2 px-5 py-2 md:px-8 md:py-3 rounded-full bg-gradient-to-r ${card.color} text-white font-bold text-sm md:text-base shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 group`}
                       >
                         Explore Packages

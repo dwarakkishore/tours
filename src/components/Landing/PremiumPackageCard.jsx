@@ -99,17 +99,14 @@ const PremiumPackageCard = ({ item, className, isGroup = false, index = 0 }) => 
       "travel-card group w-full relative overflow-hidden h-[400px] sm:h-[520px] rounded-[28px] bg-black shadow-xl hover:shadow-2xl transition-all duration-500 gpu-accelerated",
       className
     )}>
-      <Link href={href} className="block w-full h-full">
+      <Link href={href} className="block w-full h-full" prefetch={false}>
         {/* Full Priority Image / Swiper */}
         <div className="absolute inset-0 z-0">
           <Swiper
             modules={[Navigation, Autoplay, Pagination]}
             onSwiper={setSwiper}
             loop={validImages.length > 1}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-            }}
+            autoplay={false}
             pagination={{
               clickable: true,
               bulletClass: "swiper-pagination-bullet !size-1.5 !bg-white !opacity-40 !mx-1",

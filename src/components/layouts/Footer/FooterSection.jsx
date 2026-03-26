@@ -31,6 +31,7 @@ const FooterSection = ({ title, links, basePath = "packages", hoverColor = "hove
             <div key={link.id || link.slug || i} className="flex items-center gap-2">
               <Link
                 href={`/${basePath}/${link.slug.split("?")[0]}`}
+                prefetch={false}
                 className={cn("hover:translate-x-1 transition-all duration-300 whitespace-nowrap", hoverColor)}
               >
                 {link.name || link.title}
@@ -46,6 +47,7 @@ const FooterSection = ({ title, links, basePath = "packages", hoverColor = "hove
       {isOverflowing && viewAllLink && (
         <Link
           href={viewAllLink}
+          prefetch={false}
           className="font-bold text-[#FDB913] hover:text-[#FFD700] transition-all duration-300 whitespace-nowrap text-sm mt-1 inline-block uppercase tracking-wider"
         >
           VIEW MORE

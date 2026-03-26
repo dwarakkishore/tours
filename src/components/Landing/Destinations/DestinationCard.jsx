@@ -199,6 +199,7 @@ export default function DestinationCard({
                   loop
                   muted
                   playsInline
+                  preload="none"
                   className="object-cover w-full h-full transition-transform duration-700 ease-out"
                   style={{ transform: isHovered ? "scale(1.05)" : "scale(1)" }}
                 />

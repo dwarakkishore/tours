@@ -289,7 +289,7 @@ export default function FooterClient({ domesticRegions, internationalRegions }) 
           <ul className="flex flex-wrap items-center gap-x-6 gap-y-3">
             {quickLinksData.map((item, i, arr) => (
               <li key={item.id} className="flex items-center gap-6">
-                <Link href={item.href} className={cn("transition-all underline-offset-4 hover:underline whitespace-nowrap", config.hoverColor)}>
+                <Link href={item.href} prefetch={false} className={cn("transition-all underline-offset-4 hover:underline whitespace-nowrap", config.hoverColor)}>
                   {item.title}
                 </Link>
                 {i !== arr.length - 1 && (

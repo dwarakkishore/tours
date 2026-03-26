@@ -170,6 +170,7 @@ export default function DestinationSpotlight({ initialRegions = [], eliteEscapeP
           <div className="flex flex-row lg:flex-col items-center lg:items-end gap-2 md:gap-4">
             <Link
               href="/themes/elite-escape"
+              prefetch={false}
               className="group flex items-center gap-2 px-4 py-2 md:px-8 md:py-4 bg-brand-peach text-black text-sm md:text-base font-bold rounded-full shadow-xl hover:shadow-brand-peach/30 hover:scale-105 transition-all"
             >
               <span className="hidden sm:inline">Explore </span>
@@ -180,6 +181,7 @@ export default function DestinationSpotlight({ initialRegions = [], eliteEscapeP
             </Link>
             <Link
               href="/explore"
+              prefetch={false}
               className="px-4 py-2 md:px-8 md:py-4 bg-brand-peach text-black text-sm md:text-base font-bold rounded-full shadow-xl hover:shadow-brand-peach/30 hover:scale-105 transition-all flex items-center justify-center"
             >
               <span className="hidden sm:inline">Contact Our Expert</span>

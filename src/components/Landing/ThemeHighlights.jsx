@@ -25,9 +25,20 @@ export default function ThemeHighlights({
   const [currentThemeIndex, setCurrentThemeIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
+    
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    
+    const element = document.getElementById("theme-highlights-section");
+    if (element) observer.observe(element);
+    
+    return () => observer.disconnect();
   }, []);
 
   // Hook Calls ---------------------------------------------------------------
@@ -115,7 +126,7 @@ export default function ThemeHighlights({
   };
 
   return (
-    <section className="bg-white overflow-hidden section-padding">
+    <section id="theme-highlights-section" className="bg-white overflow-hidden section-padding">
       <Container>
         {/* Header */}
         <div className="mb-4 md:mb-8">
@@ -159,14 +170,17 @@ export default function ThemeHighlights({
                 key={currentThemeIndex}
                 className="absolute inset-0"
               >
-                <video
-                  src={VIDEO_MAP[currentTheme?.themeSlug]}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
+                {isVisible && (
+                  <video
+                    src={VIDEO_MAP[currentTheme?.themeSlug]}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="none"
+                    className="w-full h-full object-cover"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/80" />
               </div>
 
@@ -193,6 +207,7 @@ export default function ThemeHighlights({
                     
                     <Link
                         href={`/themes/${currentTheme?.themeSlug === 'group-adventures' ? 'group-departure' : currentTheme?.themeSlug}`}
+                        prefetch={false}
                         className="bg-gradient-to-r from-yellow-400 to-yellow-500 shadow-xl text-slate-900 inline-block px-8 py-3 sm:px-10 sm:py-4 font-bold rounded-full transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
                     >
                         Explore Packages
@@ -259,6 +274,7 @@ export default function ThemeHighlights({
                     >
                       <Link
                         href={`/packages/${pkg.region}/${pkg.packageSlug}`}
+                        prefetch={false}
                         className="block w-full h-full"
                       >
                         <div className="absolute inset-0 bg-slate-200">
@@ -302,6 +318,7 @@ export default function ThemeHighlights({
               <div className="mt-8 flex justify-end">
                  <Link 
                     href="/themes"
+                    prefetch={false}
                     className="group inline-flex items-center gap-2 text-slate-500 hover:text-brand-blue font-semibold transition-colors text-sm sm:text-base"
                  >
                     View All Categories <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

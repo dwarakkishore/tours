@@ -179,6 +179,7 @@ export default function MobileSearch({ customTrigger }) {
                         <Link
                           key={region.slug}
                           href={`/packages/${region.slug}`}
+                          prefetch={false}
                           onClick={handleClose}
                           className="flex items-center justify-between py-4 group active:bg-slate-50 transition-colors"
                         >
@@ -199,6 +200,7 @@ export default function MobileSearch({ customTrigger }) {
                         <Link
                           key={pkg.id}
                           href={`/packages/${pkg.region}/${pkg.packageSlug}`}
+                          prefetch={false}
                           onClick={handleClose}
                           className="flex gap-4 items-center group active:bg-slate-50 rounded-xl"
                         >
@@ -234,6 +236,7 @@ export default function MobileSearch({ customTrigger }) {
                     <Link
                       key={pkg}
                       href={`/packages/${pkg}`}
+                      prefetch={false}
                       onClick={handleClose}
                       className="flex items-center justify-between py-4 px-5 bg-slate-50 rounded-2xl group active:bg-brand-blue/5 transition-all"
                     >

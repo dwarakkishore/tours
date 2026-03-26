@@ -139,7 +139,7 @@ const Header = () => {
               >
                 <div className="flex size-full items-center justify-between px-3">
                   <div>
-                    <Link href="/">
+                    <Link href="/" prefetch={false}>
                       <Image
                         width={150}
                         height={30}
@@ -166,7 +166,7 @@ const Header = () => {
                       <Search />
                     </Button>
                     <Button variant={"outline-white"} asChild>
-                      <Link href="/">Contact Us</Link>
+                      <Link href="/" prefetch={false}>Contact Us</Link>
                     </Button>
                   </div>
                 </div>
@@ -232,6 +232,7 @@ const Header = () => {
                         <Link
                           className="text-white opacity-80 transition-opacity hover:opacity-100"
                           href={isDropdownOpen.slugs?.[i] ? `/packages/${isDropdownOpen.slugs[i]}` : "/"}
+                          prefetch={false}
                           key={i}
                         >
                           {item}
@@ -241,6 +242,7 @@ const Header = () => {
                         <Link
                           className="text-white opacity-100 transition-opacity"
                           href={`/themes/${item.slug.split("?")[0]}`}
+                          prefetch={false}
                           key={i}
                         >
                           <div className="flex items-center gap-4">
