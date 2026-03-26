@@ -87,7 +87,6 @@ const ExplorePackagesContent = ({ setActiveDropdown, handleMenuActive, isHeaderF
               key={theme.slug}
               href={`/themes/${theme.slug}`}
               onClick={handleClose}
-              prefetch={false}
               className="group flex items-center gap-6 p-4 rounded-2xl transition-all duration-300 hover:bg-white/10"
             >
               <div className="flex-shrink-0 w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">

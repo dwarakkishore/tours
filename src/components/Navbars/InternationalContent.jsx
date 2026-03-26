@@ -98,7 +98,6 @@ const InternationalContent = ({
                   onClick={handleClose}
                   className="domestic-packages-content rounded-full px-4 py-2 transition-all duration-300 ease-in text-white/80 hover:text-white"
                   href={`/packages/${region.slug}`}
-                  prefetch={false}
                 >
                   {region.name}
                 </Link>

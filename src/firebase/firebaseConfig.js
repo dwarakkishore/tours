@@ -35,7 +35,9 @@ const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const auth = getAuth(app);
 
 // Initialize Firestore with more robust settings to handle connectivity issues
-const db = initializeFirestore(app, {});
+const db = initializeFirestore(app, {
+  experimentalForceLongPolling: true,
+});
 
 const storage = getStorage(app);
 

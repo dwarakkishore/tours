@@ -7,7 +7,7 @@ const LazySection = ({
   children, 
   className, 
   threshold = 0.1, 
-  rootMargin = "200px", 
+  rootMargin = "600px", 
   fallback = null 
 }) => {
   const [hasIntersected, setHasIntersected] = useState(false);

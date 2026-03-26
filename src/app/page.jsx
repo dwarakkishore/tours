@@ -146,12 +146,10 @@ const HomePage = () => {
       </section>
 
       <Suspense fallback={<div className="h-96 bg-slate-50 animate-pulse" />}>
-      <LazySection rootMargin="400px" className="blue-section">
-        <section className="bg-white section-padding">
-          <ExploreDestinationsSection />
-        </section>
-        <HolidaysSection />
-      </LazySection>
+      <section className="bg-white section-padding">
+        <ExploreDestinationsSection />
+      </section>
+      <HolidaysSection />
       </Suspense>
 
       <Suspense fallback={<div className="h-64 bg-slate-50 animate-pulse m-8 rounded-3xl" />}>

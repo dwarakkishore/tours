@@ -279,7 +279,7 @@ export default function RootLayout({ children }) {
                   s.style.display = 'none';
                 }, 800);
               }
-            }, 3500);
+            }, 1000);
           `}} />
         </div>
 
