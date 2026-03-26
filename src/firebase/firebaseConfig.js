@@ -1,4 +1,4 @@
-﻿// firebase/firebaseConfig.js
+// firebase/firebaseConfig.js
 import { initializeApp, getApp, getApps } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { initializeFirestore } from "firebase/firestore";
@@ -35,9 +35,7 @@ const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const auth = getAuth(app);
 
 // Initialize Firestore with more robust settings to handle connectivity issues
-const db = initializeFirestore(app, {
-  experimentalForceLongPolling: true,
-});
+const db = initializeFirestore(app, {});
 
 const storage = getStorage(app);
 
