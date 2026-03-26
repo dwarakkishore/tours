@@ -12,6 +12,7 @@ import { TailwindIndicator } from "@/components/TailwindIndicator";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import FooterWrapper from "@/components/layouts/FooterWrapper";
 import TaboolaPixel from "@/components/TaboolaPixel";
+import { Analytics } from '@vercel/analytics/next';
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -299,6 +300,7 @@ export default function RootLayout({ children }) {
         </ClientProviders>
         <TaboolaPixel />
         <TailwindIndicator />
+        <Analytics />
       </body>
     </html>
   );
