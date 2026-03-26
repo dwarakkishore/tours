@@ -1,6 +1,14 @@
-import InternationalContent from "@/components/Navbars/InternationalContent";
-import DomesticContent from "@/components/Navbars/DomesticContent";
-import ExplorePackagesContent from "@/components/Navbars/ExplorePackagesContent";
+import dynamic from "next/dynamic";
+
+const InternationalContent = dynamic(() => import("@/components/Navbars/InternationalContent"), { 
+  loading: () => <div className="h-64 animate-pulse bg-white/10 rounded-2xl" /> 
+});
+const DomesticContent = dynamic(() => import("@/components/Navbars/DomesticContent"), { 
+  loading: () => <div className="h-64 animate-pulse bg-white/10 rounded-2xl" /> 
+});
+const ExplorePackagesContent = dynamic(() => import("@/components/Navbars/ExplorePackagesContent"), { 
+  loading: () => <div className="h-64 animate-pulse bg-white/10 rounded-2xl" /> 
+});
 
 const navbarData = [
   {

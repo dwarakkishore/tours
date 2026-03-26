@@ -84,11 +84,11 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
       </head>
-      <Metrics />
       <body
         className={`${poppins.variable} ${greatVibes.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
+        <Metrics />
         {/* Instant CSS-only Splash Screen */}
         <div id="bayard-splash-screen" suppressHydrationWarning style={{
           position: 'fixed',
@@ -101,7 +101,7 @@ export default function RootLayout({ children }) {
           justifyContent: 'center',
           transition: 'opacity 0.8s ease-out, transform 0.8s ease-out, visibility 0.8s',
           fontFamily: 'var(--font-poppins), sans-serif',
-          animation: 'splash-gradientShift 15s ease infinite',
+          animation: 'splash-gradientShift 15s ease infinite, splash-autoHide 0.8s ease-out 5s forwards',
         }}>
           <style dangerouslySetInnerHTML={{ __html: `
             :root {
@@ -114,6 +114,9 @@ export default function RootLayout({ children }) {
               opacity: 0 !important;
               transform: scale(1.1);
               visibility: hidden;
+            }
+            @keyframes splash-autoHide {
+              to { opacity: 0; visibility: hidden; transform: scale(1.05); }
             }
             @keyframes splash-gradientShift {
               0% { background-position: 0% 50%; }
@@ -270,16 +273,19 @@ export default function RootLayout({ children }) {
           </div>
 
           <script dangerouslySetInnerHTML={{ __html: `
-            // Remove splash screen
-            setTimeout(function() {
+            function hideSplash() {
               var s = document.getElementById("bayard-splash-screen");
-              if (s) {
+              if (s && !s.classList.contains('fade-out')) {
                 s.classList.add('fade-out');
-                setTimeout(function() {
-                  s.style.display = 'none';
-                }, 800);
+                setTimeout(function() { s.style.display = 'none'; }, 800);
               }
-            }, 1000);
+            }
+            // 1. Hide as soon as possible (1s)
+            setTimeout(hideSplash, 1000);
+            // 2. Hide immediately when window is fully loaded
+            window.addEventListener('load', hideSplash);
+            // 3. Hide on any user interaction (failsafe)
+            document.addEventListener('mousedown', hideSplash, { once: true });
           `}} />
         </div>
 

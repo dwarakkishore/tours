@@ -19,9 +19,9 @@ export default function LayoutWrapper({ children, footer }) {
   useEffect(() => {
     // Smoothly hide the static HTML splash screen once React takes over
     const splash = document.getElementById("bayard-splash-screen");
-    if (splash) {
-      splash.style.opacity = "0";
-      splash.style.visibility = "hidden";
+    if (splash && !splash.classList.contains('fade-out')) {
+      splash.classList.add('fade-out');
+      setTimeout(() => { splash.style.display = 'none'; }, 800);
     }
   }, []);
 
