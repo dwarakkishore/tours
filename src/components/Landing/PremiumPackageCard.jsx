@@ -121,6 +121,9 @@ const PremiumPackageCard = ({ item, className, isGroup = false, index = 0 }) => 
                     src={img.url}
                     alt={item.packageTitle || "Package"}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
                     className="object-cover"
                     priority={index < 4 && i === 0}
                   />

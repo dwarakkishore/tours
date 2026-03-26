@@ -78,7 +78,9 @@ export default function DestinationCard({
                     alt={image.title || regionData?.name || regionSlug}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
                     priority={index < 4}
                   />
                 </div>
@@ -183,28 +185,8 @@ export default function DestinationCard({
           ) : error ? (
             <>
               <div 
-                className="absolute inset-0 z-10 overflow-hidden rounded-xl md:rounded-2xl isolation-isolate transform-gpu backface-hidden"
-                style={{ 
-                  WebkitMaskImage: "-webkit-radial-gradient(white, black)",
-                  transform: "translate3d(0,0,0)",
-                  perspective: "1px",
-                  WebkitPerspective: "1px" 
-                }}
-              >
-                <video
-                  src="https://cdn.bayardvacations.com/videos/hero_section.webm"
-                  alt="Hero"
-                  placeholder="blur"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="none"
-                  className="object-cover w-full h-full transition-transform duration-700 ease-out"
-                  style={{ transform: isHovered ? "scale(1.05)" : "scale(1)" }}
-                />
-              </div>
-
+                className="absolute inset-0 z-10 overflow-hidden rounded-xl md:rounded-2xl bg-brand-deep/80"
+              />
               <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/50 to-transparent rounded-xl md:rounded-2xl" />
 
               {regionData?.name && (

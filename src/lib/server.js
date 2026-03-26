@@ -114,7 +114,7 @@ export const fetchRegions = unstableCache(async () => {
   }
 );
 
-export const getGroupDeparturePackages = async () => {
+export const getGroupDeparturePackages = cache(async () => {
   try {
     const groupAdventuresPackages =
       await getPackagesByTheme("group-adventures");
@@ -188,7 +188,7 @@ export const getGroupDeparturePackages = async () => {
     console.error("Error getting group departure packages:", error);
     return [];
   }
-};
+});
 
 const getAllPackagesByTheme = async () => {
   try {
@@ -361,7 +361,7 @@ export const getCuratedPackagesForHome = cache(unstableCache(async (packageType)
   { revalidate: 3600 }
 ));
 
-export const getGroupDeparturePackagesForHome = unstableCache(async () => {
+export const getGroupDeparturePackagesForHome = cache(unstableCache(async () => {
     return withRedisCache("published_packages", "group_departure", async () => {
     try {
       const packages = await getGroupDeparturePackages();
@@ -374,7 +374,7 @@ export const getGroupDeparturePackagesForHome = unstableCache(async () => {
   },
   ["group-departure-home-v2"],
   { revalidate: 3600 }
-);
+));
 
 export const getThemePackagesForHome = cache(unstableCache(async () => {
     return withRedisCache("published_packages", "themes", async () => {

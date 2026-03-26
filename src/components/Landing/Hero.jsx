@@ -247,6 +247,8 @@ const Hero = () => {
                                       alt={pkg.name}
                                       width={55}
                                       height={55}
+                                      placeholder="blur"
+                                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
                                       className="rounded object-cover aspect-square bg-gray-200"
                                     />
                                   )}
