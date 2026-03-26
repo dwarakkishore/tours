@@ -4,7 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { Bot, X, MessageCircle, MessageSquare } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import ChatbotPopup from "./ChatbotPopup";
+import dynamic from "next/dynamic";
+const ChatbotPopup = dynamic(() => import("./ChatbotPopup"), { ssr: false });
 import WhatsAppIconAsset from "@/assets/whatsapp_icon.svg";
 import { cn } from "@/lib/utils";
 

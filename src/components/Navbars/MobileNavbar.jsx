@@ -104,7 +104,7 @@ export default function MobileNavbar() {
           >
             {/* NAV */}
             <nav className="flex h-16 items-center gap-4 px-5 text-white">
-              <Link href="/">
+              <Link href="/" prefetch={false}>
                 <Image
                   src="/Bayard_white_logo.svg"
                   width={160}
@@ -177,7 +177,7 @@ export default function MobileNavbar() {
                 <ChevronRight />
               </button>
             ) : (
-              <Link href={item.href} onClick={handleMenuToggle}>
+              <Link href={item.href} onClick={handleMenuToggle} prefetch={false}>
                 {item.title}
               </Link>
             )}
@@ -190,6 +190,7 @@ export default function MobileNavbar() {
               <Link
                 href="/account/profile"
                 onClick={handleMenuToggle}
+                prefetch={false}
                 className="flex justify-center gap-2 rounded-full bg-white py-3 text-brand-blue"
               >
                 <CircleUserRound /> View Profile
@@ -214,6 +215,7 @@ export default function MobileNavbar() {
             <Link
               href="/login"
               onClick={handleMenuToggle}
+              prefetch={false}
               className="flex justify-center gap-2 rounded-full bg-white py-3 text-brand-blue"
             >
               <CircleUserRound /> Login
@@ -223,6 +225,7 @@ export default function MobileNavbar() {
           <Link
             href="/contact"
             onClick={handleMenuToggle}
+            prefetch={false}
             className="block text-center rounded-full border border-white py-3"
           >
             Contact Us

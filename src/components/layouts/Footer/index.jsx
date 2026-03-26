@@ -343,7 +343,7 @@ const Footer = async () => {
           <ul className="flex flex-wrap items-center gap-x-6 gap-y-3">
             {quickLinksData.map((item, i, arr) => (
               <li key={item.id} className="flex items-center gap-6">
-                <Link href={item.href} className="hover:text-brand-blue transition-all underline-offset-4 hover:underline whitespace-nowrap">
+                <Link href={item.href} prefetch={false} className="hover:text-brand-blue transition-all underline-offset-4 hover:underline whitespace-nowrap">
                   {item.title}
                 </Link>
                 {i !== arr.length - 1 && (

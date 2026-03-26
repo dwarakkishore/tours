@@ -260,7 +260,7 @@ const DesktopNavbar = () => {
                 }
               )}
             >
-              <Link href="/" onMouseOver={() => setActiveDropdown(null)} className="flex-shrink-0">
+              <Link href="/" onMouseOver={() => setActiveDropdown(null)} className="flex-shrink-0" prefetch={false}>
                 <Image
                   priority
                   width={180}
@@ -273,10 +273,11 @@ const DesktopNavbar = () => {
               <ul className="mx-auto flex items-center gap-2 lg:gap-3 xl:gap-5 2xl:gap-8 transition-all duration-300">
                 {navbarData.map((item) => (
                   <li key={item.id} onMouseOver={() => handleMouseOver(item)}>
-                    <Link
-                      href={item?.href || "/"}
-                      className="relative flex items-center gap-1 rounded-full text-[11px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px] font-semibold whitespace-nowrap ease-out after:absolute after:bottom-0 after:left-0 after:inline-block  after:h-px after:w-full after:translate-y-1 after:scale-x-0 after:bg-[#59DF02] after:transition-all after:duration-300 after:content-[''] hover:after:scale-x-100"
-                    >
+                      <Link
+                        href={item?.href || "/"}
+                        prefetch={false}
+                        className="relative flex items-center gap-1 rounded-full text-[11px] lg:text-[13px] xl:text-[14px] 2xl:text-[16px] font-semibold whitespace-nowrap ease-out after:absolute after:bottom-0 after:left-0 after:inline-block  after:h-px after:w-full after:translate-y-1 after:scale-x-0 after:bg-[#59DF02] after:transition-all after:duration-300 after:content-[''] hover:after:scale-x-100"
+                      >
                       <span>{item.title}</span>
                       {item.hasDropdown && <ChevronDown className="size-3 lg:size-3.5 xl:size-4 shrink-0" />}
                     </Link>
@@ -313,6 +314,7 @@ const DesktopNavbar = () => {
                 >
                   <Link
                     href="/login"
+                    prefetch={false}
                     className="flex items-center justify-center"
                   >
                     <CircleUserRound className="!size-6" strokeWidth={1.5} />
@@ -330,7 +332,7 @@ const DesktopNavbar = () => {
                   )}
                   asChild
                 >
-                  <Link href="/contact">Contact Us</Link>
+                  <Link href="/contact" prefetch={false}>Contact Us</Link>
                 </Button>
               </div>
             </nav>
@@ -435,6 +437,7 @@ const DesktopNavbar = () => {
                       <Link
                         key={region.id}
                         href={`/packages/${region.slug}`}
+                        prefetch={false}
                         className="group flex items-center justify-between p-4 rounded-2xl bg-slate-50 hover:bg-brand-blue hover:text-white transition-all duration-300"
                         onClick={() => {
                           handleIsSearchActive();
@@ -458,6 +461,7 @@ const DesktopNavbar = () => {
                       <Link
                         key={pkg.id}
                         href={`/packages/${pkg.region}/${pkg.packageSlug}`}
+                        prefetch={false}
                         className="group flex items-center justify-between p-5 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 border border-transparent hover:border-slate-100"
                         onClick={() => {
                           handleIsSearchActive();
@@ -504,6 +508,7 @@ const DesktopNavbar = () => {
                       <Link
                         key={pkg}
                         href={`/packages/${pkg}`}
+                        prefetch={false}
                         className="px-6 py-3 rounded-full bg-slate-50 text-slate-700 font-semibold hover:bg-brand-blue hover:text-white transition-all duration-300 border border-slate-100 hover:border-brand-blue hover:shadow-lg hover:shadow-brand-blue/20"
                         onClick={() => {
                           handleIsSearchActive();

@@ -19,8 +19,8 @@ export function useRegions(initialRegions = []) {
     enabled: true, // Always enabled
     retry: 3, // Retry failed requests 3 times
     retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000), // Exponential backoff
-    refetchOnMount: true,
-    refetchOnWindowFocus: true,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
   });
 
   return { regions, isLoading, error, refetch };
